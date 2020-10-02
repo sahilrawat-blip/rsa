@@ -23,6 +23,7 @@ void gen_rand(std::string string_num,std::string filename){
 
 
     int fd=creat(filename.c_str(),0644);
+    if(!myfile)return ;
     fchown(fd,getuid(),getgid());
     close(fd);
     myfile.open(filename.c_str(),std::ios::out|std::ios::binary);
