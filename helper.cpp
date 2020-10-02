@@ -39,6 +39,7 @@ void fsign(std::string filename,std::string privatekeyFile){
         }
         myfile.close();
     }
+    std::cout<<"check"<<std::endl;
 
     int fd=creat(signatureFile.c_str(),0664);
     fchown(fd,statbuf.st_uid,statbuf.st_gid);
